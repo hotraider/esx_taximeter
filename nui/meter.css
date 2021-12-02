@@ -1,0 +1,233 @@
+@font-face {
+	font-family: "Digital-7";
+	src: url( "digital-7.regular.ttf" );
+}
+
+/* Police Radar */
+#meter {
+	width: 595px;
+	height: 50px;
+
+	position: absolute;
+	bottom: 0px;
+	right: 10px;
+	margin: auto;
+
+	color: white;
+	border-radius: 10px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#fare {
+	width: 400px;
+	height: 50px;
+
+	position: absolute;
+	bottom: 10px;
+  right: 10px;
+	margin: auto;
+
+	color: white;
+	/* background: rgba(20, 20, 20, 0.97); */
+	/* background: linear-gra dient(to bottom, rgb(50, 50, 50), rgb(25, 25, 25)); */
+	border-radius: 10px;
+
+	display: grid;
+	grid-column-gap: 10px;
+	grid-row-gap: 10px;
+	grid-template-columns: repeat(2, 2fr);
+	/* background-color: #2196f3; */
+	margin-right: 300px;
+	padding: 2%;
+}
+
+#fare .label {
+	display: grid;
+	grid-area: label;
+}
+
+#fare .container {
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: 75% 25%;
+	grid-template-areas:
+		"meter-field"
+		"label";
+	background-color: #00000050;
+	/* background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(90, 0, 0)); */
+  	padding-top: 8px
+}
+
+#fare .meter-field {
+	display: grid;
+	grid-area: meter-field;
+	font-family: "Verdana";
+	font-weight: bold;
+	font-size: 20px;
+	letter-spacing: 2px;
+	text-align: center;
+	overflow-x: hidden;
+}
+
+#fare .label {
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	font-family: Verdana;
+	font-weight: bold;
+	font-size: 10px;
+	text-align: center;
+}
+
+#config {
+	/* background: rgba(20, 20, 20, 0.97); */
+	/* background: linear-gradient(to bottom, rgb(50, 50, 50), rgb(25, 25, 25)); */
+	width: 500px;
+	height: 500px;
+	position: absolute;
+	left: 80%;
+	transform: translateX(-50%);
+  padding: 10px;
+	position: absolute;
+	top: 50%;
+	margin-top: -250px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 20px;
+	text-align: center;
+	color: #fff;
+	margin-top: -500px;
+}
+
+#config h1{
+  margin-top: 5px;
+  margin-left: -250px;
+  font-size: 20px;
+  font-family: 'Digital-7';
+}
+
+#config .button{
+  font-family: 'Arial';
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  font-size: 18px;
+  margin: 0 auto;
+  /* background: #333; */
+  margin-bottom: 10px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+h1, h2 {
+  color: white;
+  font-family: 'Oswald', sans-serif;
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 14px;
+  margin-bottom: 30px;
+  color: #24E2B8;
+}
+
+
+
+
+
+
+:root {
+  --px: 0;
+  --py: 0;
+}
+
+
+.fancy-hover {
+  background: #242424;
+  background: rgba(36,36,36,0.9);
+  color: #FFF;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 1em 1em;
+  position: relative;
+  overflow: hidden;
+  border-bottom: solid 1px #333;
+  z-index: 2;
+  transition: background-color 0.2s linear;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 10;
+  font-weight: 10;
+}
+
+
+.fancy-hover:before,
+.fancy-hover:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: opacity 0.1s linear;
+}
+
+.fancy-hover:before {
+  width: 160px;
+  height: 120px;
+  background: radial-gradient(circle at center, #FFF 0%, transparent 60%); 
+  opacity: 0;
+  mix-blend-mode: screen;
+  transform: translate( 
+    calc( var(--px) * 1px ),
+    calc( var(--py) * 1px ) 
+  ) translate(-50%, -50%);
+  
+}
+
+.fancy-hover:after {
+  background: inherit;
+  margin: 2px;
+  top: 0; right: 0; bottom: 0; left: 0;
+  opacity: 0;
+  transition-delay: 0.05s;
+}
+
+
+.fancy-hover:hover { background-color: rgba(56,56,56,0.9); }
+.fancy-hover:hover:before { opacity: 0.6; }
+.fancy-hover:hover:after { opacity: 0.85; transition-delay: 0s; }
+
+/* ////////////////////////////////////////////////////////////////////////// */
+
+.fancy-hover--blue:hover { background-color: #24455E; }
+
+/* ////////////////////////////////////////////////////////////////////////// */
+
+.menu { overflow: hidden; border: solid 1px #444444; width: 15em; border-radius: 3px; opacity: 0.958; }
+.menu :last-child { margin-bottom: 0; }
+.fa { width: 1.25em; margin-right: 0.5em; font-size: 1.25em; text-align: center; }
+html { height: 100%; display: flex; overflow: hidden; }
+/* body { max-width: 90%; margin: auto; background: #000; } */
+
+body:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  /* background-image: url(https://unsplash.it/600/600?image=992);  */
+  background-size: cover;
+  background-position: center center;
+  z-index: -1;
+  opacity: 0.9;
+  margin: -7px;
+  filter: blur(6px);
+}
+
